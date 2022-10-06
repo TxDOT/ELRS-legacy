@@ -1,0 +1,54 @@
+  #toc {
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #FFFFFF;
+    width: 450px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    /*bottom: 70px;*/
+    /*overflow: auto;*/
+    overflow: hidden;
+  }
+
+  #mapDiv {
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #F8F8F8;
+    height: 99%;
+    position: absolute;
+    left: 455px;
+    bottom: 2px;
+    right: 2px;
+    top: 2px;
+    overflow: hidden;
+  }
+
+
+  .lrsTH {
+    background-color: #FFFFFF;
+    color: #143c5c;
+    cursor: default;
+    font-size: 15px;
+    border: solid;
+    border-color: #143c5c;
+    border-radius: 2px;
+  }
+
+  .tocTables {
+    cursor: default;
+    font-size: 13px;
+    width: 98%;
+  }
+
+  th {
+    background-color: #143c5c;
+    color: #FFFFFF;
+    cursor: default;
+    font-size: 15px;
+    border-radius: 2px;
+  }
+
+  td {
+    border-radius: 2px;
+  }

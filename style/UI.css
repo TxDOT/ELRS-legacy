@@ -1,0 +1,62 @@
+/*input[type=text], select, input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: gray;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 16px;
+}*/
+
+#mapOptions {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: 1px solid #DCDCDC;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #6495ED;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#txdotMap {
+  background-color: #DCDCDC;
+  padding: 3px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+#imagery {
+  background-color: white;
+  padding: 3px;
+}
+#divInput {
+  background-color: white;
+}
+
+
+/*.h3{
+   color: white;
+   font-family: Arial;
+}
+
+.left{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+}*/

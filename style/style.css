@@ -1,1 +1,154 @@
+/* nav bar */
 
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #777;
+}
+
+.nav li {
+  display: inline;
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* warning bar */
+
+.w3-panel h3 {
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Segoe UI",Arial,sans-serif;
+  margin: 10px 0;
+}
+
+.w3-panel p {
+  display: block;
+  font-size: 18px;
+  font-family: "Segoe UI",Arial,sans-serif;
+  margin: 10px 0;
+}
+
+/* lists */
+
+.format_list {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+.format_list li {
+  font-family: 'Red Hat Mono', monospace;
+}
+
+/* intro */
+.intro {
+	padding: 0 50px 20px 50px;
+}
+
+.intro p {
+  font-family: 'DM Serif Display', serif;
+	padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* headings */
+
+h1, h2, h4 {
+  font-family: 'DM Serif Display', serif;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+
+/* calculator element styling */
+
+.example, .textentry, .textecho, .textout, .elrs_url {
+  font-family: 'Red Hat Mono', monospace;
+	text-align: left;
+}
+
+.label, .label_output, .label_output_sm {
+  font-family: 'Poppins', sans-serif;
+	text-align: left;
+}
+
+.resultsbtn, .resetbtn, .page_btn, .page_disp, .mapbtn, .rtebtn {
+  font-family: 'Poppins', sans-serif;
+	text-align: center;
+	text-decoration: none;
+}
+
+.label, .label_output, .label_output_sm {
+  background-color: #567EA6;/*half blue*/
+  border-radius: 10px 0 0 10px;
+  color: white;
+}
+
+
+
+.textentry, .textout, .textecho, .elrs_url {
+  background-color: whitesmoke;
+  border-radius: 0 10px 10px 0;
+}
+
+.resultsbtn, .resetbtn, .page_btn, .page_disp, .mapbtn, .rtebtn {
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.resultsbtn {
+  background-color: #CC7B29; /*full orange*/
+}
+
+.resetbtn {
+  background-color: DimGrey;
+}
+
+.page_btn {
+  background-color: #CC7B29; /*full orange*/
+}
+
+.page_disp {
+  background-color: DimGrey;
+}
+
+.mapbtn {
+  background-color: #D59F6A; /*full orange*/
+}
+
+.rtebtn, .dforesultsbtn {
+  background-color: #D59F6A; /*full orange*/
+}
+
+#returnBDFO {
+  background-color: #CC7B29; /*full orange*/
+}

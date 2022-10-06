@@ -1,0 +1,38 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+}*/
+
+
+
+.main_input {
+  background-color: #f2f2f2;
+  padding: 20px;
+  max-width: 678px;
+  font-family: Arial;
+  margin: auto;
+  width: 25% !important;
+  float: left;
+  display: inline-block;
+}
+
+
+.map_output {
+  /*position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;*/
+  float: left;
+  display: inline-block;
+  width: 70% !important;
+  /*height: 100%;*/
+  border-left: 1px solid black;
+  overflow: hidden;
+}
