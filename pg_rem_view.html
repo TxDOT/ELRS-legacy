@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta chaset = "utf-8">
+    <title>eLRS Event Mapper</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&family=Red+Hat+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://js.arcgis.com/3.28/esri/css/esri.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/flex_layout.css">
+    <link rel="stylesheet" href="style/style_rem_view.css">
+    <link rel="stylesheet" href="style/UI.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://js.arcgis.com/3.35/"></script>
+    <script src="script/scripts_convert_rem.js"></script>
+    <script src="script/eventinput.js"></script>
+    <script src="script/eventmap_onepg.js"></script>
+    <script src="script/button_color.js"></script>
+  </head>
+
+  <body>
+    <div class="main_input">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pg_form_view.html">Form View</a></li>
+        <li><a href="pg_map_view.html">Map View</a></li>
+        <li><a href="pg_rem_view.html">Route View</a></li>
+      </ul>
+      <div class ="intro">
+        <p>This eLRS tool converts two pairs of lat/lon coordinates to a route and DFOs.</p>
+        <br>
+        <p>Convert each lat/lon pair, assemble the query, and then map the project.</p>
+    </div>
+      <br><br>
+
+      <form name="terminal_select" id ="terminal_form" class="multi-input">
+        <div class="singleinput">
+          <label for="b_lat" class="label">Begin Latitude:</label>
+          <input type="number" required id="b_lat" name="b_lat" value="29.851046" class="textentry">
+        </div>
+        <div class="singleinput">
+          <label for="b_lon" class="label">Begin Longitude:</label>
+          <input type="number" required id="b_lon" name="b_lon" value="-97.959709" class="textentry">
+        </div>
+        <br><button type="button" onclick="renderRouteELRS(0)" id="returnBDFO" class="resultsbtn dforesultsbtn">Return Begin DFO</button><br>
+        <div class="singleinput">
+          <label for="e_lat" class="label">End Latitude:</label>
+          <input type="number" required id="e_lat" name="e_lat" value="29.923694"class="textentry">
+        </div>
+        <div class="singleinput">
+          <label for="e_lon" class="label">End Longitude:</label>
+          <input type="number" required id="e_lon" name="e_lon" value="-97.892373" class="textentry">
+        </div>
+        <br><button type="button" onclick="renderRouteELRS(1)" id="returnEDFO" class="resultsbtn dforesultsbtn">Return End DFO</button><br>
+      </form>
+
+      <div name="input" class="multi-output">
+        <div class="singleoutput">
+          <label for="route" class="label_output">Route Name</label>
+          <p id="p_returned_RTE_DEFN_LN_NM" name="RTE_NM" class="textout"></p>
+        </div>
+        <div class="singleoutput">
+          <label for="beginDFO" class="label_output">Begin DFO</label>
+          <p id="BDFO" name="BDFO" class="textout"></p>
+        </div>
+        <div class="singleoutput">
+          <label for="endDFO" class="label_output">End DFO</label>
+          <p id="EDFO" name="EDFO" class="textout"></p>
+        </div>
+        <button onclick="addOrAssembleQueryStr(1)" id="addOrAssembleQueryStr_btn" class="rtebtn">Assemble Query</button>
+        <button onclick="" id="mapProjects_btn" class="rtebtn">Map Project</button>
+      </div>
+    </div>
+    <div class="map_output" id="map">
+    </div>
+    <div id="mapOptions">
+      <div onclick="addTxDOT()" id="txdotMap" title="View the TxDOT Base Map">TxDOT</div>
+      <div onclick="addImagery()" id="imagery" title="View Satellite Imagery">Imagery</div>
+    </div>
+  </body>
+</html>

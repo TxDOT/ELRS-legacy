@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>eLRS Front End</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&family=Red+Hat+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/flex_layout.css">
+  <link rel="stylesheet" href="style/show_hide.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+  <div class="w3-panel w3-red">
+    <h3>Danger!</h3>
+    <p>Some field names appear to be swapped in the API.</p>
+    <p>Sometimes only one road at an intersection is returned.</p>
+  </div>
+
+  <div class="w3-panel w3-yellow">
+    <h3>Warning!</h3>
+    <p>There is no error handling when no road is returned.</p>
+    <p>This webpage has only limited data validation for text fields.</p>
+  </div>
+
+  <ul class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pg_form_view.html">Form View</a></li>
+    <li><a href="pg_map_view.html">Map View</a></li>
+    <li><a href="pg_rem_view.html">Route View</a></li>
+  </ul>
+
+  <div class ="intro">
+    <h1>eLRS Front End Demo</h1>
+    <p>This eLRS tool can accept coordinates in four different formats:</p>
+      <ul class="format_list">
+        <li>Lat, Lon</li>
+        <li>RouteID (Route Name), Reference Marker, and Displacement</li>
+        <li>RouteID (Route Name), And Distance from Origin</li>
+        <li>Control Section And Mile Point Measure</li>
+      </ul>
+    <p>When multiple roads are returned, buttons appear to step through them.</p>
+  </div>
+</body>
+</html>

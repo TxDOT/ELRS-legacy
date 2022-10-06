@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+	<title>eLRS Map Input</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&family=Red+Hat+Mono&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://js.arcgis.com/3.32/esri/css/esri.css">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/flex_layout.css">
+  <link rel="stylesheet" href="style/show_hide.css">
+	<link rel="stylesheet" href="style/style_map_view.css">
+
+	<script src="https://js.arcgis.com/3.31/"></script>
+	<script src="script/esriapi_big_map.js"></script>
+	<script src="script/scripts_convert_map.js"></script>
+
+	<script>
+		console.log("setting current_page, route_count, elrs_method to 0");
+		var current_page = 0;
+		var route_count = 0;
+		var elrs_method = 0;
+	</script>
+</head>
+
+<body class="claro">
+	<div id="toc">
+		<ul class="nav">
+      <li><a href="index.html">Home</a></li>
+			<li><a href="pg_form_view.html">Form View</a></li>
+			<li><a href="pg_map_view.html">Map View</a></li>
+      <li><a href="pg_rem_view.html">Route View</a></li>
+		</ul>
+    <div class ="intro">
+      <!--<h2>eLRS Front End Demo</h2>-->
+      <p>This eLRS tool generates coordinates when the user clicks the map with the crosshair cursor.</p>
+      <br>
+      <p>When multiple roads are returned, buttons appear to step through them.</p>
+    </div>
+		<form class="results_pane" id = "calculator_report">
+				<div class="multi-output" id="listingTable">
+
+					<h2>Coordinates</h2>
+					<div class="singleoutput">
+						<p class="label_output">Latitude:</p>
+						<output id="p_returned_LAT" class="textout"></output>
+					</div>
+					<div class="singleoutput">
+						<p class="label_output">Longitude:</p>
+						<output id="p_returned_LON" class="textout"></output>
+					</div>
+
+					<h2>URL</h2>
+					<div class="singleoutput">
+						<p class="label_output_sm">URL:</p>
+						<a href="" id="elrs_url" class="elrs_url"></a>
+					</div>
+
+					<h2>Results</h2>
+					<div class="singleoutput">
+						<p class="label_output">RouteID:</p>
+						<output id="p_returned_ROUTEID" class="textout"></output>
+					</div>
+					<div class="singleoutput">
+						<p class="label_output">Roadbed Type:</p>
+						<output id="p_returned_RDBD_TYPE_DSCR" class="textout"></output>
+					</div>
+					<div class="singleoutput">
+						<p class="label_output">Route Prefix Type:</p>
+						<output id="p_returned_RTE_PRFX_TYPE_DSCR" class="textout"></output>
+					</div>
+					<div class="singleoutput">
+						<p class="label_output">Route Number:</p>
+						<output id="p_returned_ROUTENUMBER" class="textout"></output>
+					</div>
+
+					<h2>Route Name</h2>
+					<div class="singleoutput">
+						<p class="label_output">Route Name:</p>
+						<output id="p_returned_RTE_DEFN_LN_NM" class="textout"></output>
+					</div>
+					<div class="singleoutput">
+						<p class="label_output">Reference Marker:</p>
+						<output id="p_returned_RMRKR_PNT_NBR" class="textout"></output>
+					</div>
+					<div class="singleoutput">
+						<p class="label_output">Displacement:</p>
+						<output id="p_returned_RMRKR_DISPLACEMENT" class="textout"></output>
+					</div>
+					<div class="singleoutput">
+						<p class="label_output">Distance from Origin:</p>
+						<output id="p_returned_RTE_DFO" class="textout"></output>
+					</div>
+
+					<h2>Control Section</h2>
+					<div class="singleoutput">
+						<p class="label_output">Control Section:</p>
+						<output id="p_returned_CTRL_SECT_LN_NBR" class="textout"></output>
+					</div>
+					<div class="singleoutput">
+						<p class="label_output">Mile Point Measure:</p>
+						<output id="p_returned_CTRL_SECT_MPT" class="textout"></output>
+					</div>
+
+					<div class="pagination">
+						<button type="button" onclick="prevPage()" class="page_btn" id="btn_prev">Prev</button><br>
+						<span class="page_disp" id="page"></span>
+						<button type="button" onclick="nextPage()" class="page_btn" id="btn_next">Next</button><br>
+					</div>
+
+				</div>
+		</form>
+	</div>
+	<div id="mapDiv"></div>
+</body>
+</html>
