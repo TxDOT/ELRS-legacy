@@ -67,7 +67,8 @@ require([
  	  // Create a symbol for drawing the point
  	  var markerSymbol = {
    		type: "simple-marker", // autocasts as new SimpleMarkerSymbol()
-   		color: [226, 119, 40]
+   		color: [226, 119, 40],
+      size: "24px"
  	  };
 
  	  // Create a graphic and add the geometry and symbol to it

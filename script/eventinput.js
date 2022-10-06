@@ -4,8 +4,8 @@ var queryConditions;
 
 function addOrAssembleQueryStr(method) {
   console.log("addOrAssembleQueryStr");
-  var color = "#ff8000";
-  var width = 4;
+  var color = "#ff0000";
+  var width = 6;
   var desc = '';
 
   if (rtenm.length<1) {
