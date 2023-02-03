@@ -66,7 +66,7 @@ function Convert_Coords(elrs_method) {
     var csj = $.trim(document.getElementById("csj").value);
     var mpm = $.trim(document.getElementById("mpm").value);
 
-    var gridpath = "https://grid-sys.us-e1.cloudhub.io/api/"
+    var gridpath = "https://lrs-ext.us-e1.cloudhub.io/api/"
     var grid_elrs1 = gridpath + "elrs1?Lat=" + lat + "&Lon=" + lon;
     var grid_elrs2 = gridpath + "elrs2?RouteID=" + routeid_2 + "&ReferenceMarker=" + refmarker + "&Displacement=" + displacement
     var grid_elrs3 = gridpath + "elrs3?ControlSectionNumber=" + csj + "&MilePointMeasure=" + mpm;
