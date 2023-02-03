@@ -7,7 +7,7 @@ function Convert_Coords(terminus) {
 
   function makeURL(terminus) {
     console.log("make url: " + terminus);
-    var gridpath = "https://grid-sys.us-e1.cloudhub.io/api/"
+    var gridpath = "https://lrs-ext.us-e1.cloudhub.io/api/"
     var b_lat = $.trim(document.getElementById("b_lat").value);
     var b_lon = $.trim(document.getElementById("b_lon").value);
     var e_lat = $.trim(document.getElementById("e_lat").value);
