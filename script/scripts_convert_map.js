@@ -5,7 +5,7 @@ function Convert_Coords_Map(x, y) {
     console.log("make url");
     var lat = y;
     var lon = x;
-    var gridpath = "https://grid-sys.us-e1.cloudhub.io/api/"
+    var gridpath = "https://lrs-ext.us-e1.cloudhub.io/api/"
     var grid_elrs1 = gridpath + "elrs1?Lat=" + lat + "&Lon=" + lon;
     var url = grid_elrs1;
 
